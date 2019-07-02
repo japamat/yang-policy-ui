@@ -1,0 +1,58 @@
+
+:root {
+    --black: hsl(0, 0%, 0%);
+    --blueDark: hsl(216, 100%, 22%);
+    --blueDarkTransparent: hsla(216, 100%, 22%, 0.67);
+    --blueLight: hsl(205, 70%, 58%);
+    --blueLightest: hsla(213, 100%, 95%, 0.8);
+    --blueTransparent: hsla(212, 100%, 35%, 0.9);
+    --blueTransparentLight: hsla(213, 100%, 95%, 0.44);
+    --grayDarker: hsl(0, 0%, 29%);
+    --grayDark: hsl(0, 0%, 61%);
+    --grayLight: hsl(0, 0%, 61%, 0.1);
+    --grayLighter: hsla(0, 0%, 85%, 0.2);
+    --red: hsl(352, 69%, 53%);
+    --redDark: hsl(352, 69%, 39%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body {
+    color: #333;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 1.625;
+}
+
+.entry-title {
+  color: var(--blueDark);
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.entry-description {
+    font-size: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.bg-yangblue {
+    background-color: var(--blueDark)
+}
+
+.yang-search, .yang-results {
+    padding-top: 10px
+}
+
+.yang-brand {
+    margin: auto !important;
+}
+
+.donate-button {
+    background-color: var(--red) !important;
+    border-color: var(--red) !important;
+    font-weight: bold !important;
+    font-size: 20px !important;
+}
