@@ -85,7 +85,7 @@ body {
   min-height: calc(100vh - 75px);
 }
 .yang-brand {
-  margin: auto !important;
+  margin: 10px 0;
 }
 
 .donate-button {
@@ -93,6 +93,7 @@ body {
   border-color: var(--red) !important;
   font-weight: bold !important;
   font-size: 20px !important;
+  margin-right: 85px;
 }
 
 #loading-spinner {
@@ -141,4 +142,19 @@ mark::after {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+@media screen and (max-width: 475px) {
+  .yang-nav {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .donate-button {
+    margin-right: 0;
+  }
+
+  .yang-results {
+    padding: 20px;
+  }
 }

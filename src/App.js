@@ -13,10 +13,24 @@ import Button from "react-bootstrap/Button";
 import Spinner from "react-bootstrap/Spinner";
 
 function App() {
+  const screenWidth = window.screen.width;
+  
   return (
     <ReactiveBase app="policies-v1" credentials="" url="https://hjdb4k649f.execute-api.us-east-1.amazonaws.com/beta">
-    {/* <ReactiveBase app="test4" credentials="" url="http://localhost:9200"> */}
-      <Navbar bg="yangblue" variant="dark">
+      <Navbar bg="yangblue" variant="dark" className="flex-wrap justify-content-around yang-nav">
+        <Button className="donate-button" href="https://yang2020.com/donate">
+          DONATE
+        </Button>
+        <Navbar.Brand className="yang-brand">
+          <a href="https://yang2020.com">
+            <img
+              alt=""
+              src={bannerLogo}
+              height="60"
+              className="d-inline-block align-top"
+            />
+          </a>
+        </Navbar.Brand>
         <DataSearch
           componentId="mainSearch"
           dataField={["title", "brief", "action"]}
@@ -36,19 +50,6 @@ function App() {
             }
           })}
         />
-        <Navbar.Brand className="yang-brand">
-          <a href="https://yang2020.com">
-            <img
-              alt=""
-              src={bannerLogo}
-              height="60"
-              className="d-inline-block align-top"
-            />
-          </a>
-        </Navbar.Brand>
-        <Button className="donate-button" href="https://yang2020.com/donate">
-          DONATE
-        </Button>
       </Navbar>
       <ReactiveList
         componentId="SearchResult"
@@ -58,6 +59,9 @@ function App() {
         }}
         showResultStats={false}
         pagination={true}
+        paginationAt={ screenWidth > 600 ? 'bottom' : 'both' }
+        pages={screenWidth > 375 ? 5 : 3}
+        URLParams={true}
         className="yang-results"
         render={({ data, error, loading }) => (
           <ReactiveList.ResultListWrapper>
